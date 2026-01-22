@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Quiz Lý luận nhận thức – MLN111</title>
+  <meta name="description" content="Bài kiểm tra ngẫu nhiên về Lý luận nhận thức: xáo trộn câu hỏi và đáp án, nộp bài và chấm điểm tự động.">
+  <link rel="stylesheet" href="src/assets/css/styles.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">MLN111</a>
+      <nav class="nav-links">
+        <a href="index.html#muc-luc">Mục lục</a>
+        <a href="index.html#chu-de">Chủ đề</a>
+        <a href="index.html#hinh-anh">Hình minh hoạ</a>
+        <a href="quiz.html" class="btn-quiz" aria-current="page">Quiz</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero mini -->
+  <section class="hero-mini">
+    <div class="container">
+      <div class="banner"><div class="overlay"></div><div class="title">Quiz Lý luận nhận thức</div></div>
+      <div class="breadcrumb"><a href="index.html">Trang chủ</a> <span>›</span> Quiz</div>
+
+      <div class="detail-layout">
+        <!-- Bảng điều khiển -->
+        <aside class="toc" aria-label="Thiết lập bài làm">
+          <h4>Thiết lập</h4>
+          <label class="quiz-field">
+            Số câu (5–20):
+            <input id="qCount" type="number" min="5" max="20" value="10" />
+          </label>
+          <label class="quiz-field">
+            Thời gian (phút):
+            <input id="qMinutes" type="number" min="0" max="60" value="0" />
+            <small>(0 = không giới hạn)</small>
+          </label>
+          <button id="btnNew" class="btn-primary" style="width:100%;margin-top:8px;">Tạo đề ngẫu nhiên</button>
+          <hr class="hr-soft">
+          <div class="quiz-meta">
+            <div>Đồng hồ: <span id="timer">--:--</span></div>
+            <div>Trạng thái: <span id="status">Chưa bắt đầu</span></div>
+          </div>
+          <div class="callout info" style="margin-top:10px">
+            <div class="hd">Ghi chú</div>
+            Câu hỏi & phương án được xáo trộn mỗi lần tạo đề. Bạn có thể nộp bài nhiều lần.
+          </div>
+        </aside>
+
+        <!-- Nội dung bài -->
+        <main class="prose">
+          <form id="quizForm" class="quiz-form" novalidate>
+            <div id="quizContainer" class="quiz-container">
+              <!-- Câu hỏi render ở đây -->
+            </div>
+
+            <div class="quiz-actions">
+              <button type="button" id="btnSubmit" class="btn-primary">Nộp bài</button>
+              <button type="button" id="btnReset" class="btn-ghost">Làm lại</button>
+            </div>
+          </form>
+
+          <section id="quizResult" class="quiz-result" hidden>
+            <h2>Kết quả</h2>
+            <p><strong>Điểm:</strong> <span id="scoreText">0/0</span> — <span id="scorePercent">0%</span> (<span id="scoreBand">–</span>)</p>
+            <div id="scoreMessage" class="callout"></div>
+          </section>
+        </main>
+      </div>
+
+      <div class="pager">
+        <a href="index.html">⬅ Trang chủ</a>
+        <a href="khai-niem.html">Ôn “Khái niệm nhận thức” ➜</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- JS -->
+<script type="module" src="/src/assets/js/main.js"></script>
+
+<script type="module" src="/src/assets/js/quiz.js"></script>
+
+
+  <!-- Chatbot (nếu dùng Botpress) -->
+<script src="https://cdn.botpress.cloud/webchat/v3.3/inject.js" defer></script>
+<script src="https://files.bpcontent.cloud/2025/10/05/13/20251005132619-198EACMZ.js" defer></script>
+  <script>
+    window.botpressWebChat = window.botpressWebChat || {};
+    window.botpressWebChat.init({
+      composerPlaceholder: "Hỏi về LLNT…",
+      botName: "MLN111 Assistant",
+      hideWidget: true,
+      botConversationDescription: "Chatbot Q&A LLNT",
+      hostUrl: "https://cdn.botpress.cloud/webchat/v1",
+      messagingUrl: "https://messaging.botpress.cloud",
+      clientId: "YOUR_BOTPRESS_CLIENT_ID"
+    });
+  </script>
+</body>
+</html>
