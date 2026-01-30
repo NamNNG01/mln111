@@ -230,3 +230,336 @@ a{ color: var(--primary); text-decoration: none; }
   line-height: 1;
   box-shadow: none;
 }
+
+:root{
+  --bg: #0a0c10;
+  --card: rgba(18, 20, 30, 0.92);
+  --text: #F1F3F8;
+  --muted: #B7BECE;
+
+  --primary: #C9A24D;   /* vàng triết học */
+  --accent:  #9BDB4D;   /* giữ xanh cho quiz */
+  --border: rgba(255,255,255,0.08);
+
+  --maxw: 1080px;
+}
+.section,
+.hero,
+.footer{
+  position: relative;
+}
+
+.section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(10,12,18,0.6);
+  border-radius: 24px;
+  z-index:-1;
+}
+.hero-text h1,
+.section-title,
+.prose h2{
+  letter-spacing: 0.3px;
+}
+
+.prose{
+  max-width: 720px;
+  margin: auto;
+}
+/* ===== PROSE – Philosophy Reading Mode ===== */
+
+.prose{
+  background: rgba(12,14,20,0.78);
+  backdrop-filter: blur(6px);
+  border-radius: 18px;
+  padding: 22px 24px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.35);
+}
+
+/* Heading */
+.prose h2{
+  margin-top: 26px;
+  margin-bottom: 12px;
+  font-size: 24px;
+  font-family: Merriweather, serif;
+  color: #F3F5FA;
+  letter-spacing: 0.4px;
+}
+
+.prose h3{
+  margin-top: 18px;
+  margin-bottom: 8px;
+  font-size: 19px;
+  font-family: Merriweather, serif;
+  color: #E7EAF2;
+}
+
+/* Paragraph */
+.prose p{
+  color: #E1E6F0;
+  font-size: 16px;
+  line-height: 1.8;
+  margin: 0 0 14px;
+}
+
+/* Lists */
+.prose ul{
+  margin: 10px 0 14px 20px;
+  padding-left: 0;
+  color: #D2D9EA;
+}
+
+.prose li{
+  line-height: 1.7;
+}
+
+.prose li + li{
+  margin-top: 8px;
+}
+
+/* Emphasis */
+.prose strong{
+  color: #F7F9FF;
+}
+
+.prose em{
+  color: #F0E6C0; /* vàng nhẹ triết học */
+}
+
+:root{
+  --paper: rgba(88, 72, 38, 0.38);   /* vàng nâu từ ảnh */
+  --paper-border: rgba(255, 220, 150, 0.18);
+
+  --ink-main: #F5F2EA;   /* trắng ngà */
+  --ink-muted:#E4DEC9;
+
+  --ink-accent:#E7C873;  /* vàng triết học */
+}
+/* ===== PROSE – Parchment Philosophy Style ===== */
+
+.prose{
+  background: linear-gradient(
+    180deg,
+    rgba(120, 98, 54, 0.45),
+    rgba(70, 56, 28, 0.45)
+  );
+  backdrop-filter: blur(4px);
+  border: 1px solid var(--paper-border);
+  border-radius: 18px;
+  padding: 24px 26px;
+}
+
+/* Headings */
+.prose h2{
+  margin-top: 26px;
+  margin-bottom: 12px;
+  font-size: 24px;
+  font-family: Merriweather, serif;
+  color: var(--ink-accent);
+  letter-spacing: 0.4px;
+}
+
+.prose h3{
+  margin-top: 18px;
+  margin-bottom: 8px;
+  font-size: 19px;
+  font-family: Merriweather, serif;
+  color: var(--ink-main);
+  opacity: 0.92;
+}
+
+/* Paragraph */
+.prose p{
+  color: var(--ink-main);
+  font-size: 16px;
+  line-height: 1.85;
+  margin: 0 0 14px;
+}
+
+/* Lists */
+.prose ul{
+  margin: 10px 0 14px 20px;
+  color: var(--ink-muted);
+}
+
+.prose li{
+  line-height: 1.75;
+}
+
+.prose li + li{
+  margin-top: 8px;
+}
+
+/* Emphasis */
+.prose strong{
+  color: var(--ink-accent);
+}
+
+.prose em{
+  color: var(--ink-muted);
+  font-style: italic;
+}
+/* ===== PROSE – High Readability Philosophy ===== */
+
+.prose{
+  background: linear-gradient(
+    180deg,
+    rgba(130, 110, 70, 0.58),
+    rgba(90, 74, 38, 0.58)
+  );
+  backdrop-filter: blur(3px);
+  border: 1px solid rgba(255, 230, 170, 0.28);
+  border-radius: 20px;
+  padding: 28px 30px;
+}
+
+/* Headings */
+.prose h2{
+  margin-top: 32px;
+  margin-bottom: 14px;
+  font-size: 26px;              /* TO hơn */
+  font-family: Merriweather, serif;
+  font-weight: 800;             /* ĐẬM rõ */
+  color: #FFE8A6;               /* vàng sáng */
+  letter-spacing: 0.5px;
+}
+
+.prose h3{
+  margin-top: 22px;
+  margin-bottom: 10px;
+  font-size: 21px;
+  font-family: Merriweather, serif;
+  font-weight: 700;
+  color: #FFF4D4;
+}
+
+/* Paragraph */
+.prose p{
+  color: #FFFBEF;               /* gần trắng */
+  font-size: 18px;              /* TO + dễ đọc */
+  line-height: 1.9;             /* rất thoáng */
+  font-weight: 500;
+  margin: 0 0 18px;
+}
+
+/* Lists */
+.prose ul{
+  margin: 14px 0 18px 22px;
+  color: #FFF6DB;
+}
+
+.prose li{
+  font-size: 18px;
+  line-height: 1.85;
+  font-weight: 500;
+}
+
+.prose li + li{
+  margin-top: 10px;
+}
+
+/* Emphasis */
+.prose strong{
+  color: #FFE08A;
+  font-weight: 700;
+}
+
+.prose em{
+  color: #FFF1C2;
+  font-style: italic;
+}
+body::before{
+  content:"";
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(
+      rgba(10, 8, 4, 0.55),
+      rgba(10, 8, 4, 0.65)
+    ),
+    url('../img/bg.webp') center/cover no-repeat;
+  z-index: -1;
+}
+
+:root{
+  --paper-card: rgba(135, 112, 68, 0.58);
+  --paper-card-hover: rgba(145, 122, 78, 0.68);
+  --paper-border: rgba(255, 230, 170, 0.28);
+
+  --ink-main: #FFFBEF;
+  --ink-muted:#F2E8C9;
+  --ink-accent:#FFE08A;
+
+  --maxw: 1080px;
+}
+
+/* ===== Cards – Parchment Philosophy Style ===== */
+
+.grid-cards{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap:18px;
+}
+
+.card{
+  background: linear-gradient(
+    180deg,
+    rgba(150, 125, 78, 0.62),
+    rgba(105, 86, 46, 0.62)
+  );
+  border: 1px solid var(--paper-border);
+  border-radius: 18px;
+  padding: 20px 22px;
+  display: block;
+  color: var(--ink-main);
+  backdrop-filter: blur(3px);
+  box-shadow: 0 6px 22px rgba(0,0,0,0.28);
+  transition:
+    transform .18s ease,
+    box-shadow .18s ease,
+    background .18s ease;
+}
+
+/* Hover: nâng nhẹ – KHÔNG gắt */
+.card:hover{
+  transform: translateY(-3px);
+  background: linear-gradient(
+    180deg,
+    rgba(165, 140, 90, 0.72),
+    rgba(115, 96, 56, 0.72)
+  );
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+/* Icon */
+.card-icon{
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: var(--ink-accent);
+}
+
+/* Title */
+.card h3{
+  margin: 8px 0 10px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ink-main);
+  letter-spacing: 0.3px;
+}
+
+/* Description */
+.card p{
+  margin: 0 0 12px;
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--ink-muted);
+  font-weight: 500;
+}
+
+/* Link */
+.card-link{
+  color: var(--ink-accent);
+  font-weight: 700;
+  font-size: 15px;
+}
